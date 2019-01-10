@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1050.0" prefWidth="1650.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <Label prefHeight="38.0" prefWidth="195.0" text="Blockchain Demo" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <JFXListView prefHeight="286.0" prefWidth="171.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <Canvas fx:id="canvas" height="736.0" width="1651.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <VBox prefHeight="276.0" prefWidth="645.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Create new block">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="blockTextArea" prefHeight="209.0" prefWidth="246.0" promptText="Transaction data" style="-fx-background-color: lightblue;" />
+            <JFXButton fx:id="blockButton" buttonType="RAISED" onAction="#createBlock" prefHeight="39.0" prefWidth="654.0" style="-fx-background-color: lightblue;" text="Add block to blockchain">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox prefHeight="286.0" prefWidth="268.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Create Genesis block">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="genesisTextArea" prefHeight="210.0" prefWidth="288.0" promptText="Transaction data" style="-fx-background-color: orange;" />
+            <JFXButton fx:id="genesisButton" buttonType="RAISED" onAction="#createGenesisBlock" prefHeight="39.0" prefWidth="1345.0" style="-fx-background-color: orange;" text="Create new Genesis Block">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
